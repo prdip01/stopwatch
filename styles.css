@@ -1,0 +1,136 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+@keyframes colorChange {
+    0% { color: #211bd3; }
+    25% { color: #eb4034; }
+    50% { color: #f1c40f; }
+    75% { color: #2ecc71; }
+    100% { color: #211bd3; }
+}
+
+.stopwatch {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.stopwatch h1 {
+    margin: 0;
+    font-size: 2em;
+    animation: colorChange 4s infinite;
+    margin-bottom: 20px;
+}
+
+#display {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+}
+
+#startPause {
+    background: #28a745;
+    color: white;
+}
+
+#reset {
+    background: #dc3545;
+    color: white;
+}
+
+#lap {
+    background: #ffc107;
+    color: white;
+}
+
+.laps {
+    margin-top: 20px;
+}
+
+.laps h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+#lapTimes {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+#lapTimes li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+    color: #555;
+    transition: background 0.3s;
+}
+
+#lapTimes li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+#lapTimes li:hover {
+    background: #f1f1f1;
+}
+
+@media (max-width: 400px) {
+    .stopwatch {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .buttons button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #display {
+        font-size: 2em;
+    }
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 2em;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff7e5f;
+}
